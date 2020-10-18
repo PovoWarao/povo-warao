@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #5C1700;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+#menu {
+    float: right;
+    margin-right: 2%;
+    list-style: none;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.topicos {
+    float: left;
+    padding: 20;
+}
+.topicos:hover {
+    background:#A82A00;
+}
+
+.banner {
+    background-color: #A82A00;
+    background-image: url(img/Familia_de_Warao_en_canoe.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: bottom;
+}
+.banner h1 {
+    text-align: center;
+    padding: 20%;
+    font-size: 56px;
+    text-decoration: underline;
+    position: static;
+}
+#sobreotrabalho h2, #historiaecultura h2, #situacaoatual h2, #migracaoeapoio h2, #referencias h2, #fotos h2 {
+   text-align: center;
+   font-size: 26px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   text-decoration: underline;
+}
+#sobreotrabalho, #situacaoatual, #fotos {
+ background-color: snow;
+}
+#historiaecultura, #migracaoeapoio, #referencias {
+ background-color: #DB3700;
+}
+#sobreotrabalho, #historiaecultura, #situacaoatual, #migracaoeapoio, #referencias p{
+ text-align: justify;
+ padding-right: 20%;
+ padding-left: 20%;
+ font-size: 18px;
+ font-family: Arial, Helvetica, sans-serif;
+}
+#cartaz {
+    padding-right: 20%;
+}
+
+#referencias a {
+    color: black;
+}
+#referencias h3 {
+    text-align: center;
+}
+#fotos {
+    padding-left: 400px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 600px;
+    height: 500px;
+}
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+}
+.arrow {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 50px;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background: url(img/arrow-left-icon-removebg-preview.png) 50% 50% / 20px no-repeat;
+}
+.arrow-prev {
+    left: 0;
+}
+.arrow-next {
+    right: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+@media all and (max-width:768px) {
+    .arrow{
+        background-size: 10px;
+        background-position: 10px 50%;
+    }
+    #menu {
+        visibility: hidden;
+    }
+    #fotos {
+        padding: 0%;
+    }
+}
+[id^="target-item"] {
+    display: none;
+}
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+}
+\*:target ~ .item-1 {
+    opacity: 0;
+}
+#target-item-1:target ~ .item-1 {
+    opacity: 1;
+}
+#target-item-2:target ~ .item-2, #target-item-3:target ~ .item-3,  #target-item-4:target ~ .item-4,  #target-item-5:target ~ .item-5,  #target-item-6:target ~ .item-6, #target-item-7:target ~ .item-7,  #target-item-8:target ~ .item-8,  #target-item-9:target ~ .item-9,   #target-item-10:target ~ .item-10,  #target-item-11:target ~ .item-11,  #target-item-12:target ~ .item-12, #target-item-13:target ~ .item-13, #target-item-14:target ~ .item-14 {
+    z-index: 3;
+    opacity: 1;
+}
+
+footer {
+    background-color: #5C1700;
+    float: left;
+    width: 100%;
+}
+
+#grupo {
+    position: relative;
+    float: left;
+    width: 20%;
+    padding: 2% 11%;
+}
+#grupo h3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+}
+footer p { 
+   text-align: center;
+   position: relative;
+   color: whitesmoke;
+   margin-top: 20%;
+   font-size: 11px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+footer h2 {
+    color: whitesmoke;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 1%;
+}
+#grupo img {
+    border-radius: 100px;
+}
+@media all and (max-width:768px) { 
+    #menu {
+        visibility: hidden;
+    }
+    #grupo {
+    display: block; 
+    width: 80%;
+    padding: 0;
+    margin: 10px auto;
+    float: none;
+    }
+    footer p { 
+        text-align: center;
+        position: relative;
+        color: whitesmoke;
+        margin-top: 5%;
+        font-size: 11px;
+        font-family: Arial, Helvetica, sans-serif;
+     }
+     #sobreotrabalho, #historiaecultura, #situacaoatual, #migracaoeapoio, #referencias p{
+        text-align: justify;
+        padding-right: 10%;
+        padding-left: 10%;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .carousel-item img {
+        width: 250px;
+        height: 250px;
+    }
+    .carousel-wrapper {
+        position: relative;
+        width: 250px;
+        height: 250px;
+    }
+    #referencias a{
+        font-size: 12px;
+    }
+    #link {
+        font-size: 9px;
+    }
+}
+
+
+
+
+
